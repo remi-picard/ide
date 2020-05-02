@@ -1,0 +1,25 @@
+# In your repository's `.github/workflows/publish-to-github-pages.yaml` file.
+---
+# Name of your GitHub Actions workflow.
+name: Publish to GitHub Pages
+
+# Specifies to run this workflow whenever a push is made (commits are
+# added) to the branch named `jekyll`.
+on:
+  push:
+    branches:
+      # Change this to the branch where you keep your Jekyll code.
+      - master
+
+# Define a job named `build_and_deploy` in your workflow.
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build & Deploy to GitHub Pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ secrets.GITHUB_REPOSITORY }}
+          GITHUB_ACTOR: ${{ secrets.GITHUB_ACTOR }}
+        uses: BryanSchuetz/jekyll-deploy-gh-pages@v2.0
