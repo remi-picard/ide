@@ -53,6 +53,7 @@ permalink: /code/
 ![Emmet]({{ 'assets/img/emmet.gif' | relative_url }})
 
 - `Maj ⇧` + `Alt` + `F` : Formatter le code
+- `Maj ⇧` + `Alt` + `O` : Réorganiser les imports
 
 ### Navigation Fenêtres
 
@@ -63,6 +64,7 @@ permalink: /code/
 
 ## Extensions
 
+- [Git Graph](https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph)
 - [Rainbow CSV](https://marketplace.visualstudio.com/items?itemName=mechatroner.rainbow-csv)
 - [Output Colorizer](https://marketplace.visualstudio.com/items?itemName=IBM.output-colorizer)
 
